@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>basement.studio — Before (P0 baseline)</title>
+  <link rel="stylesheet" href="tokens.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-background);
+      color: var(--color-foreground);
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      z-index: 10;
+    }
+    .logo { font-weight: 800; font-size: 1.25rem; letter-spacing: -0.02em; }
+    .menu-btn {
+      background: none;
+      border: none;
+      color: var(--color-foreground);
+      font-size: 0.875rem;
+      cursor: pointer;
+    }
+    .hero-3d {
+      height: 70vh;
+      background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-3d::after {
+      content: "3D WebGL Scene (always active)";
+      font-size: 0.75rem;
+      opacity: 0.5;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .headline {
+      padding: 3rem 2rem 4rem;
+      font-size: clamp(2rem, 8vw, 4.5rem);
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      max-width: 1200px;
+    }
+    .badge {
+      display: inline-block;
+      margin: 0 2rem 2rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid #333;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="logo menu-btn" type="button">basement.</button>
+    <button class="menu-btn" type="button">Menu</button>
+  </header>
+  <div class="hero-3d" aria-hidden="true"></div>
+  <span class="badge">Before — no reduced-motion fallback</span>
+  <h1 class="headline">A digital studio &amp; branding powerhouse making cool shit that performs</h1>
+</body>
+</html>

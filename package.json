@@ -1,0 +1,13 @@
+{
+  "name": "design-intelligence-skills",
+  "version": "1.0.0",
+  "description": "Cursor agent skills for web design intelligence — brand audits, trends, proposals, and implementation",
+  "private": true,
+  "scripts": {
+    "validate-brandbook": "node scripts/validate-brandbook.js",
+    "extract-tokens": "node scripts/extract-tokens.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.0"
+  }
+}

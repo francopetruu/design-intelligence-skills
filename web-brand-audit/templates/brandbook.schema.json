@@ -1,0 +1,207 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://design-intelligence.dev/schemas/brandbook.json",
+  "title": "Brandbook",
+  "type": "object",
+  "required": [
+    "meta",
+    "brand",
+    "colors",
+    "typography",
+    "spacing",
+    "motion",
+    "components",
+    "accessibility",
+    "techSignals"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["url", "auditedAt", "breakpoints"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "auditedAt": { "type": "string", "format": "date-time" },
+        "auditor": { "type": "string" },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "breakpoints": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "width", "height"],
+            "properties": {
+              "name": { "type": "string" },
+              "width": { "type": "integer" },
+              "height": { "type": "integer" }
+            }
+          },
+          "minItems": 1
+        },
+        "notes": { "type": "string" }
+      }
+    },
+    "brand": {
+      "type": "object",
+      "required": ["name", "voice"],
+      "properties": {
+        "name": { "type": "string" },
+        "tagline": { "type": "string" },
+        "voice": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "personality": { "type": "string" }
+      }
+    },
+    "colors": {
+      "type": "object",
+      "required": ["primary", "neutrals"],
+      "properties": {
+        "primary": { "$ref": "#/definitions/colorToken" },
+        "secondary": { "$ref": "#/definitions/colorToken" },
+        "accent": { "$ref": "#/definitions/colorToken" },
+        "background": { "$ref": "#/definitions/colorToken" },
+        "foreground": { "$ref": "#/definitions/colorToken" },
+        "neutrals": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/colorToken" }
+        },
+        "semantic": {
+          "type": "object",
+          "properties": {
+            "success": { "$ref": "#/definitions/colorToken" },
+            "warning": { "$ref": "#/definitions/colorToken" },
+            "error": { "$ref": "#/definitions/colorToken" },
+            "info": { "$ref": "#/definitions/colorToken" }
+          }
+        },
+        "cssVariables": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+    "typography": {
+      "type": "object",
+      "required": ["body"],
+      "properties": {
+        "display": { "$ref": "#/definitions/typeScale" },
+        "heading": { "$ref": "#/definitions/typeScale" },
+        "body": { "$ref": "#/definitions/typeScale" },
+        "mono": { "$ref": "#/definitions/typeScale" },
+        "scaleRatio": { "type": "number" }
+      }
+    },
+    "spacing": {
+      "type": "object",
+      "required": ["baseUnit"],
+      "properties": {
+        "baseUnit": { "type": "integer", "enum": [4, 8] },
+        "scale": {
+          "type": "array",
+          "items": { "type": "integer" }
+        },
+        "containerMaxWidth": { "type": "string" },
+        "sectionPadding": { "type": "string" }
+      }
+    },
+    "motion": {
+      "type": "object",
+      "properties": {
+        "durationMs": {
+          "type": "object",
+          "properties": {
+            "fast": { "type": "integer" },
+            "normal": { "type": "integer" },
+            "slow": { "type": "integer" }
+          }
+        },
+        "easing": { "type": "string" },
+        "patterns": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "reducedMotionSupported": { "type": "boolean" }
+      }
+    },
+    "components": {
+      "type": "object",
+      "properties": {
+        "navigation": { "type": "string" },
+        "buttons": { "type": "string" },
+        "cards": { "type": "string" },
+        "forms": { "type": "string" },
+        "footer": { "type": "string" },
+        "observedPatterns": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "accessibility": {
+      "type": "object",
+      "properties": {
+        "contrastIssues": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "touchTargetIssues": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "landmarkStructure": { "type": "string" },
+        "keyboardNavNotes": { "type": "string" }
+      }
+    },
+    "techSignals": {
+      "type": "object",
+      "properties": {
+        "framework": { "type": "string" },
+        "cssApproach": { "type": "string" },
+        "componentLibrary": { "type": "string" },
+        "animationLibs": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "hasWebGL": { "type": "boolean" },
+        "hostingHints": { "type": "string" }
+      }
+    },
+    "screenshots": {
+      "type": "object",
+      "properties": {
+        "desktop": { "type": "string" },
+        "tablet": { "type": "string" },
+        "mobile": { "type": "string" }
+      }
+    }
+  },
+  "definitions": {
+    "colorToken": {
+      "type": "object",
+      "required": ["hex", "usage"],
+      "properties": {
+        "hex": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "oklch": { "type": "string" },
+        "usage": { "type": "string" },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        }
+      }
+    },
+    "typeScale": {
+      "type": "object",
+      "properties": {
+        "family": { "type": "string" },
+        "weight": { "type": "string" },
+        "size": { "type": "string" },
+        "lineHeight": { "type": "string" },
+        "letterSpacing": { "type": "string" }
+      }
+    }
+  }
+}

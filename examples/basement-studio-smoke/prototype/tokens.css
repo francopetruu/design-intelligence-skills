@@ -1,0 +1,20 @@
+:root {
+  --color-background: #0a0a0a;
+  --color-foreground: #ffffff;
+  --color-accent: #e85d04;
+  --color-muted: #888888;
+  --font-display: "Arial Black", "Helvetica Neue", sans-serif;
+  --font-sans: system-ui, -apple-system, sans-serif;
+  --motion-duration-fast: 150ms;
+  --motion-duration-normal: 250ms;
+  --motion-easing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

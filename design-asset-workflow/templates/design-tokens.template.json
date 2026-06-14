@@ -1,0 +1,76 @@
+{
+  "$schema": "https://design-intelligence.dev/schemas/design-tokens.json",
+  "meta": {
+    "source": "brandbook.json",
+    "generatedAt": "2026-06-14T12:00:00.000Z",
+    "format": "oklch-preferred"
+  },
+  "color": {
+    "background": { "value": "oklch(1 0 0)", "hex": "#FFFFFF" },
+    "foreground": { "value": "oklch(0.2 0.02 264)", "hex": "#0F172A" },
+    "primary": { "value": "oklch(0.55 0.22 264)", "hex": "#0066FF" },
+    "primary-foreground": { "value": "oklch(0.99 0 0)", "hex": "#FFFFFF" },
+    "muted": { "value": "oklch(0.97 0.01 264)", "hex": "#F8FAFC" },
+    "muted-foreground": { "value": "oklch(0.5 0.02 264)", "hex": "#64748B" },
+    "accent": { "value": "oklch(0.55 0.22 264)", "hex": "#0066FF" },
+    "destructive": { "value": "oklch(0.55 0.22 25)", "hex": "#DC2626" },
+    "border": { "value": "oklch(0.92 0.01 264)", "hex": "#E2E8F0" },
+    "ring": { "value": "oklch(0.55 0.22 264)", "hex": "#0066FF" }
+  },
+  "font": {
+    "display": {
+      "family": "Brand Display, system-ui, sans-serif",
+      "weight": "700"
+    },
+    "sans": {
+      "family": "Brand Text, system-ui, sans-serif",
+      "weight": "400"
+    },
+    "mono": {
+      "family": "ui-monospace, monospace",
+      "weight": "400"
+    }
+  },
+  "fontSize": {
+    "xs": "0.75rem",
+    "sm": "0.875rem",
+    "base": "1rem",
+    "lg": "1.125rem",
+    "xl": "1.25rem",
+    "2xl": "1.5rem",
+    "3xl": "1.875rem",
+    "4xl": "2.25rem",
+    "5xl": "3rem"
+  },
+  "spacing": {
+    "unit": 8,
+    "scale": {
+      "1": "0.25rem",
+      "2": "0.5rem",
+      "3": "0.75rem",
+      "4": "1rem",
+      "6": "1.5rem",
+      "8": "2rem",
+      "12": "3rem",
+      "16": "4rem"
+    }
+  },
+  "radius": {
+    "sm": "0.25rem",
+    "md": "0.5rem",
+    "lg": "0.75rem",
+    "full": "9999px"
+  },
+  "motion": {
+    "duration": {
+      "fast": "150ms",
+      "normal": "250ms",
+      "slow": "400ms"
+    },
+    "easing": {
+      "default": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "in": "cubic-bezier(0.4, 0, 1, 1)",
+      "out": "cubic-bezier(0, 0, 0.2, 1)"
+    }
+  }
+}

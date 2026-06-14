@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "source": "examples/basement-studio-smoke/brandbook.json",
+    "generatedAt": "2026-06-14T13:45:00.000Z",
+    "format": "oklch-preferred"
+  },
+  "color": {
+    "background": { "value": "oklch(0.15 0 0)", "hex": "#0A0A0A" },
+    "foreground": { "value": "oklch(1 0 0)", "hex": "#FFFFFF" },
+    "primary": { "value": "oklch(1 0 0)", "hex": "#FFFFFF" },
+    "accent": { "value": "oklch(0.62 0.19 45)", "hex": "#E85D04" },
+    "muted": { "value": "oklch(0.55 0 0)", "hex": "#888888" },
+    "surface": { "value": "oklch(0.2 0 0)", "hex": "#1A1A1A" }
+  },
+  "font": {
+    "display": {
+      "family": "Arial Black, Helvetica Neue, sans-serif",
+      "weight": "800"
+    },
+    "sans": {
+      "family": "system-ui, -apple-system, sans-serif",
+      "weight": "400"
+    }
+  },
+  "spacing": {
+    "unit": 8,
+    "scale": {
+      "2": "0.5rem",
+      "4": "1rem",
+      "6": "1.5rem",
+      "8": "2rem",
+      "12": "3rem",
+      "16": "4rem"
+    }
+  },
+  "motion": {
+    "duration": {
+      "fast": "150ms",
+      "normal": "300ms",
+      "slow": "600ms"
+    },
+    "easing": {
+      "default": "cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    "reducedMotion": {
+      "fallback": "static-poster",
+      "optInLabel": "Enter full experience"
+    }
+  }
+}

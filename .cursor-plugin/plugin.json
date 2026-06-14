@@ -1,0 +1,9 @@
+{
+  "name": "design-intelligence-skills",
+  "description": "Design intelligence skill suite for Cursor — brand audits, trends, proposals, stack advice, and implementation",
+  "version": "1.0.0",
+  "author": {
+    "name": "petru"
+  },
+  "skills": "./"
+}

@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "url": "https://example.com",
+    "auditedAt": "2026-06-14T12:00:00.000Z",
+    "auditor": "web-brand-audit",
+    "confidence": "high",
+    "breakpoints": [
+      { "name": "mobile", "width": 375, "height": 812 },
+      { "name": "tablet", "width": 768, "height": 1024 },
+      { "name": "desktop", "width": 1280, "height": 800 }
+    ],
+    "notes": "Example brandbook for schema reference."
+  },
+  "brand": {
+    "name": "Example Co",
+    "tagline": "Build faster",
+    "voice": ["professional", "technical", "confident"],
+    "personality": "Clean SaaS with strong developer focus."
+  },
+  "colors": {
+    "primary": {
+      "hex": "#0066FF",
+      "oklch": "oklch(0.55 0.22 264)",
+      "usage": "Primary CTAs and links",
+      "confidence": "high"
+    },
+    "background": {
+      "hex": "#FFFFFF",
+      "usage": "Page background",
+      "confidence": "high"
+    },
+    "foreground": {
+      "hex": "#0F172A",
+      "usage": "Body text",
+      "confidence": "high"
+    },
+    "neutrals": [
+      { "hex": "#F8FAFC", "usage": "Surface muted" },
+      { "hex": "#64748B", "usage": "Secondary text" }
+    ],
+    "semantic": {
+      "success": { "hex": "#16A34A", "usage": "Success states" },
+      "error": { "hex": "#DC2626", "usage": "Error states" }
+    },
+    "cssVariables": {
+      "--background": "#ffffff",
+      "--foreground": "#0f172a"
+    }
+  },
+  "typography": {
+    "display": {
+      "family": "Custom Display, system-ui",
+      "weight": "700",
+      "size": "48px–72px",
+      "lineHeight": "1.1"
+    },
+    "body": {
+      "family": "Inter, system-ui",
+      "weight": "400",
+      "size": "16px",
+      "lineHeight": "1.6"
+    },
+    "scaleRatio": 1.25
+  },
+  "spacing": {
+    "baseUnit": 8,
+    "scale": [4, 8, 16, 24, 32, 48, 64],
+    "containerMaxWidth": "1280px",
+    "sectionPadding": "64px–96px vertical"
+  },
+  "motion": {
+    "durationMs": { "fast": 150, "normal": 250, "slow": 400 },
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "patterns": ["hover opacity", "fade-in on scroll"],
+    "reducedMotionSupported": true
+  },
+  "components": {
+    "navigation": "Sticky top bar, logo left, links center, CTA right",
+    "buttons": "Filled primary, ghost secondary, 8px radius",
+    "cards": "Border subtle, 16px padding, no heavy shadow",
+    "observedPatterns": ["hero with split layout", "logo strip", "feature grid"]
+  },
+  "accessibility": {
+    "contrastIssues": [],
+    "touchTargetIssues": [],
+    "landmarkStructure": "header, main, footer present",
+    "keyboardNavNotes": "Focus ring visible on interactive elements"
+  },
+  "techSignals": {
+    "framework": "Next.js",
+    "cssApproach": "Tailwind CSS",
+    "componentLibrary": "shadcn/ui",
+    "animationLibs": ["framer-motion"],
+    "hasWebGL": false,
+    "hostingHints": "Vercel"
+  },
+  "screenshots": {
+    "desktop": "design-intelligence/example/desktop.png",
+    "tablet": "design-intelligence/example/tablet.png",
+    "mobile": "design-intelligence/example/mobile.png"
+  }
+}

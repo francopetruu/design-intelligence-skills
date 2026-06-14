@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "url": "https://basement.studio/",
+    "auditedAt": "2026-06-14T13:42:00.000Z",
+    "auditor": "web-brand-audit smoke test",
+    "confidence": "high",
+    "breakpoints": [
+      { "name": "mobile", "width": 375, "height": 812 },
+      { "name": "tablet", "width": 768, "height": 1024 },
+      { "name": "desktop", "width": 1280, "height": 800 }
+    ],
+    "notes": "Audited via cursor-ide-browser snapshot and full-page screenshot. Playwright extract-tokens unavailable (Playwright not installed)."
+  },
+  "brand": {
+    "name": "basement.studio",
+    "tagline": "We make cool shit that performs.",
+    "voice": ["bold", "irreverent", "performance-focused", "craft-driven", "editorial"],
+    "personality": "High-end digital studio merging 3D craft with engineering discipline; confident tone with profanity-adjacent copy used intentionally."
+  },
+  "colors": {
+    "primary": {
+      "hex": "#FFFFFF",
+      "usage": "Primary headlines and logo on dark backgrounds",
+      "confidence": "high"
+    },
+    "background": {
+      "hex": "#0A0A0A",
+      "usage": "Page and section backgrounds; near-pure black",
+      "confidence": "high"
+    },
+    "foreground": {
+      "hex": "#FFFFFF",
+      "usage": "Body and headline text on dark",
+      "confidence": "high"
+    },
+    "accent": {
+      "hex": "#E85D04",
+      "usage": "Warm orange from 3D scene lighting and arcade glow",
+      "confidence": "medium"
+    },
+    "neutrals": [
+      { "hex": "#1A1A1A", "usage": "3D environment surfaces and depth layers" },
+      { "hex": "#888888", "usage": "Secondary UI labels (Menu, footer)" }
+    ],
+    "semantic": {},
+    "cssVariables": {}
+  },
+  "typography": {
+    "display": {
+      "family": "Bold grotesque sans-serif, tight tracking",
+      "weight": "700-900",
+      "size": "48px–96px viewport-scale",
+      "lineHeight": "0.95–1.05",
+      "letterSpacing": "tight / negative"
+    },
+    "heading": {
+      "family": "Bold grotesque sans-serif",
+      "weight": "700",
+      "size": "24px–36px",
+      "lineHeight": "1.1"
+    },
+    "body": {
+      "family": "Clean sans-serif",
+      "weight": "400",
+      "size": "16px–18px",
+      "lineHeight": "1.5–1.6"
+    },
+    "scaleRatio": 1.25
+  },
+  "spacing": {
+    "baseUnit": 8,
+    "scale": [8, 16, 24, 32, 48, 64, 96],
+    "containerMaxWidth": "full-bleed sections with padded text blocks",
+    "sectionPadding": "Large vertical rhythm; hero 3D full viewport"
+  },
+  "motion": {
+    "durationMs": { "fast": 150, "normal": 300, "slow": 600 },
+    "easing": "custom / ease-out for scroll reveals",
+    "patterns": [
+      "3D scene parallax and camera movement",
+      "scroll-linked typography reveals",
+      "ambient audio toggle",
+      "project carousel / case study transitions"
+    ],
+    "reducedMotionSupported": false
+  },
+  "components": {
+    "navigation": "Minimal fixed header: logo left, hamburger Menu right, transparent over 3D hero",
+    "buttons": "Text buttons (Contact Us, Turn music on); high contrast white on dark",
+    "cards": "Featured project blocks with image/video and case study copy",
+    "footer": "Multi-column links, newsletter CTA, social icons, copyright",
+    "observedPatterns": [
+      "Full-viewport 3D hero with dithered/lo-fi aesthetic",
+      "Oversized editorial headline below fold",
+      "Trusted-by logo strip",
+      "Capabilities accordion-style service grid",
+      "Featured projects with client names as links"
+    ]
+  },
+  "accessibility": {
+    "contrastIssues": [
+      "Low-light 3D scene may reduce perceived contrast for decorative content"
+    ],
+    "touchTargetIssues": [],
+    "landmarkStructure": "document with headings h1-h4; navigation via header links and footer list",
+    "keyboardNavNotes": "Interactive buttons labeled (Go to homepage, Open menu, Contact Us); verify focus visibility over 3D canvas"
+  },
+  "techSignals": {
+    "framework": "Next.js (inferred from studio stack and Vercel partnership)",
+    "cssApproach": "Custom CSS / Tailwind hybrid",
+    "componentLibrary": "Custom components",
+    "animationLibs": ["Three.js / React Three Fiber", "custom shaders", "GSAP or similar scroll"],
+    "hasWebGL": true,
+    "hostingHints": "Vercel edge"
+  },
+  "screenshots": {
+    "desktop": "page-2026-06-14T13-42-43-501Z.png",
+    "tablet": "not captured in smoke test",
+    "mobile": "not captured in smoke test"
+  }
+}
