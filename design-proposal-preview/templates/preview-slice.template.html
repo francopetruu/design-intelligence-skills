@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{Site Name} — Preview {variant} — {rec-ids}</title>
+  <link rel="stylesheet" href="tokens.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-sans, system-ui, sans-serif);
+      background: var(--color-background, #0a0a0a);
+      color: var(--color-foreground, #fff);
+      line-height: 1.5;
+    }
+    .preview-banner {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0.5rem 1rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: var(--color-accent, #e85d04);
+      color: var(--color-background, #000);
+      text-align: center;
+    }
+    .slice { padding: 2rem; max-width: 72rem; margin: 0 auto; }
+    .unchanged {
+      margin: 2rem;
+      padding: 1rem;
+      border: 1px dashed var(--color-muted, #555);
+      color: var(--color-muted-foreground, #888);
+      text-align: center;
+      font-size: 0.875rem;
+    }
+    /* Component styles — override per slice */
+  </style>
+</head>
+<body>
+  <div class="preview-banner">
+    Preview — not production — {tier} — {rec-ids}
+  </div>
+
+  <!-- Slice content: hero | nav | section — tag changes with data-preview-rec -->
+  <main class="slice" data-preview-rec="P0-1">
+    <!-- {Slice markup} -->
+  </main>
+
+  <div class="unchanged" aria-hidden="true">Rest of page unchanged in this preview</div>
+</body>
+</html>

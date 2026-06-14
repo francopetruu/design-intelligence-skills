@@ -12,6 +12,7 @@ Inspired by [Anthropic frontend-design](https://github.com/anthropics/claude-cod
 | `web-brand-audit` | Extract structured brandbook from live URLs |
 | `design-trends-intelligence` | Trend references (basement.studio, market leaders, anti-patterns) |
 | `design-improvement-proposal` | Gap analysis with impact×effort scoring |
+| `design-proposal-preview` | HTML/CSS before/after previews (lite / standard / full) |
 | `frontend-stack-advisor` | Stack and architecture ADRs |
 | `design-to-implementation` | Apply approved changes in code |
 | `design-asset-workflow` | Figma (when MCP available) or tokens/Canvas/prototypes |
@@ -47,7 +48,7 @@ npx skills add <owner>/design-intelligence-skills --path .cursor/skills
 Ask Cursor:
 
 ```
-Using design-orchestrator, audit https://example.com and propose design improvements.
+Using design-orchestrator, audit https://example.com, propose improvements, and generate a lite HTML preview.
 ```
 
 Or step by step:
@@ -55,9 +56,18 @@ Or step by step:
 1. `web-brand-audit` → `brandbook.json`
 2. `design-trends-intelligence` → `trend-benchmark.md`
 3. `design-improvement-proposal` → prioritized recommendations
-4. `frontend-stack-advisor` → ADR (if building/migrating)
-5. `design-asset-workflow` → tokens or Figma
-6. `design-to-implementation` → code changes
+4. `design-proposal-preview` → `preview/after.html` or `compare.html` (default: **lite** tier)
+5. `frontend-stack-advisor` → ADR (if building/migrating)
+6. `design-asset-workflow` → tokens or Figma
+7. `design-to-implementation` → code changes
+
+### Preview tiers (cost control)
+
+| Tier | Scope | Use when |
+|------|-------|----------|
+| **lite** | P0, 1 slice | Default — fast validation |
+| **standard** | P0 + 2 P1, before/after | Stakeholder review |
+| **full** | Hub + multiple slices | Workshop only |
 
 ## Scripts
 
@@ -90,7 +100,8 @@ See [`examples/basement-studio-smoke/`](examples/basement-studio-smoke/) for a f
 - `brandbook.json` — validated against schema
 - `trend-benchmark.md` — trend analysis
 - `proposal.md` — improvement recommendations
-- `prototype/before.html` + `after.html` — P0 implementation demo
+- `preview/compare.html` + `manifest.json` — standard tier before/after
+- `prototype/before.html` + `after.html` — P0 slice demo
 - `design-tokens.json` — exported tokens
 
 ## Pipeline
@@ -101,6 +112,7 @@ User request
   → web-brand-audit → brandbook.json
   → design-trends-intelligence → trend-benchmark.md
   → design-improvement-proposal → proposal.md
+  → design-proposal-preview → preview/ (optional, lite default)
   → frontend-stack-advisor → ADR (optional)
   → design-asset-workflow → tokens / Figma
   → design-to-implementation → code

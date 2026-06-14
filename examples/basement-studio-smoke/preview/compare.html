@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>basement.studio — Proposal Preview Compare</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; background: #111; color: #fff; }
+    .preview-banner {
+      padding: 0.5rem 1rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      background: #e85d04;
+      color: #000;
+      text-align: center;
+    }
+    .compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 85vh;
+    }
+    @media (max-width: 768px) { .compare { grid-template-columns: 1fr; } }
+    .panel { padding: 1rem; border-right: 1px solid #333; }
+    .panel:last-child { border-right: none; }
+    .panel-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.6;
+      margin-bottom: 0.75rem;
+    }
+    iframe { width: 100%; height: 75vh; border: 1px solid #333; background: #000; }
+    .legend { padding: 1rem 1.5rem; font-size: 0.85rem; color: #aaa; border-top: 1px solid #333; }
+    .legend li { margin: 0.25rem 0; }
+  </style>
+</head>
+<body>
+  <div class="preview-banner">Proposal preview — P0-1, P0-3 — standard tier</div>
+  <div class="compare">
+    <section class="panel">
+      <p class="panel-label">Before</p>
+      <iframe src="../prototype/before.html" title="Before"></iframe>
+    </section>
+    <section class="panel">
+      <p class="panel-label">After (proposed)</p>
+      <iframe src="../prototype/after.html" title="After"></iframe>
+    </section>
+  </div>
+  <div class="legend">
+    <strong>Changes shown</strong>
+    <ul>
+      <li><strong>P0-1</strong> — Reduced-motion static hero fallback + opt-in button</li>
+      <li><strong>P0-3</strong> — Focus-visible rings on header controls</li>
+    </ul>
+  </div>
+</body>
+</html>

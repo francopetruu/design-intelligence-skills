@@ -47,6 +47,7 @@ Summarized from brandbook:
 - **Preserve:** 
 - **Effort:** S | M | L
 - **Dependencies:** 
+- **Preview:** slice-hero | slice-nav | slice-section | component | compare-tokens | skip
 
 ### P1 — Brand elevation
 
@@ -87,7 +88,9 @@ Summarized from brandbook:
 ## Approval
 
 - [ ] User approved for implementation
+- [ ] User approved for HTML preview (lite / standard / full)
+- [ ] User approved preview direction (if preview generated)
 - [ ] User approved for asset generation (Figma/tokens)
 - [ ] User approved for stack changes
 
-**Next skill:** `frontend-stack-advisor` | `design-asset-workflow` | `design-to-implementation`
+**Next skill:** `design-proposal-preview` | `frontend-stack-advisor` | `design-asset-workflow` | `design-to-implementation`

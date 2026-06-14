@@ -13,7 +13,8 @@ Entry point for the Design Intelligence skill suite. Route the user request to t
 | Mode | Trigger | Phases |
 |------|---------|--------|
 | `audit-only` | "audit", "analyze", "extract brandbook" | 1–2 |
-| `audit+proposal` | "review", "improve", "recommendations" | 1–4 |
+| `audit+proposal` | "review", "improve", "recommendations" | 1–4 (offer preview lite) |
+| `audit+proposal+preview` | "preview", "show me", "mockup", "how would it look" | 1–4 + 4b |
 | `full-redesign` | "redesign", "modernize", "migrate UI" | 1–7 |
 | `greenfield` | "new app", "from scratch", no existing URL | 3–7 (skip audit or use reference sites) |
 
@@ -27,6 +28,7 @@ Task Progress:
 - [ ] Phase 2: Brand audit (web-brand-audit)
 - [ ] Phase 3: Trend benchmark (design-trends-intelligence)
 - [ ] Phase 4: Improvement proposal (design-improvement-proposal)
+- [ ] Phase 4b: Proposal preview (design-proposal-preview) — lite by default if user wants visual
 - [ ] Phase 5: Stack & architecture (frontend-stack-advisor) — if building or migrating
 - [ ] Phase 6: Design assets (design-asset-workflow) — if Figma/tokens/prototypes needed
 - [ ] Phase 7: Implementation (design-to-implementation) — if user approves changes
@@ -73,6 +75,18 @@ Output: proposal using `design-improvement-proposal/templates/proposal-template.
 
 **Gate:** Get explicit user approval before Phase 7 implementation.
 
+## Phase 4b: Proposal preview
+
+Read [design-proposal-preview](../design-proposal-preview/SKILL.md) when the user wants to **see** proposed changes before coding.
+
+Default tier: **lite** (P0, one slice, `after.html` + shared `tokens.css`).
+
+After proposal, ask: "¿Genero preview HTML (lite / standard / full)?" Skip if user only wanted the written analysis.
+
+Output: `design-intelligence/<site-slug>/preview/` with `manifest.json`.
+
+Open `compare.html` or `after.html` in browser for review. Gate Phase 7 on preview approval when preview was generated.
+
 ## Phase 5: Stack & architecture
 
 Read [frontend-stack-advisor](../frontend-stack-advisor/SKILL.md) when:
@@ -116,6 +130,7 @@ Before claiming done:
 | `web-brand-audit` | URL or live app analysis |
 | `design-trends-intelligence` | Benchmarking against market |
 | `design-improvement-proposal` | Gap analysis and prioritized recs |
+| `design-proposal-preview` | HTML/CSS before/after previews |
 | `frontend-stack-advisor` | Architecture and tech stack |
 | `design-asset-workflow` | Figma, tokens, prototypes |
 | `design-to-implementation` | Code changes |
@@ -144,6 +159,9 @@ Cursor plugin: package with `.cursor-plugin/plugin.json` for marketplace distrib
 
 **"Audit basement.studio and suggest improvements"**
 → `audit+proposal` → Phases 1–4 → Canvas or markdown proposal
+
+**"Audit X and show me how the improvements would look"**
+→ `audit+proposal+preview` → Phases 1–4 + 4b lite → `preview/compare.html`
 
 **"Redesign our landing page — here's the repo"**
 → `full-redesign` → Phases 1–8 after user approves proposal

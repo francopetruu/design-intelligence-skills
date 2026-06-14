@@ -48,6 +48,7 @@ Each item must include:
 - **Preserve** — brand elements kept
 - **Effort** — S / M / L
 - **Dependencies** — stack, assets, approvals
+- **Preview** — `slice-hero` | `slice-nav` | `slice-section` | `component` | `compare-tokens` | `skip` (see `design-proposal-preview`)
 
 ## Output
 
@@ -73,6 +74,7 @@ Save as `design-intelligence/<site-slug>/proposal.md` or equivalent.
 
 | Next step | Skill |
 |-----------|-------|
+| Visual preview | `design-proposal-preview` (lite tier default) |
 | Stack decision | `frontend-stack-advisor` |
 | Figma / tokens | `design-asset-workflow` |
 | Code changes | `design-to-implementation` |

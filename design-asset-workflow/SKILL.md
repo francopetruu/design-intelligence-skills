@@ -80,8 +80,11 @@ Write to workspace `canvases/<site-slug>-design-review.canvas.tsx`.
 
 ### B3 — HTML/CSS prototype
 
-Standalone `prototype/index.html` + `styles/tokens.css` for stakeholder review:
+For **proposal-specific before/after previews**, use `design-proposal-preview` (tiered, manifest, compare view).
 
+For generic stakeholder prototypes:
+
+- Standalone `prototype/index.html` + `tokens.css`
 - No build step required
 - Responsive at 375/768/1280
 - One key page from proposal
@@ -105,7 +108,7 @@ Assets Progress:
 - [ ] design-tokens.json
 - [ ] tokens.css (OKLCH)
 - [ ] Component spec (markdown table: name, states, spacing)
-- [ ] Prototype OR Figma link
+- [ ] Proposal preview (`design-proposal-preview`) OR generic prototype OR Figma link
 - [ ] Canvas review (optional)
 - [ ] Motion spec (durations, easing from brandbook.motion)
 ```

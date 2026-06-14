@@ -45,6 +45,7 @@ None significant — site intentionally avoids generic AI slop.
 - **Preserve:** Dithered 3D aesthetic for default users
 - **Effort:** S
 - **Dependencies:** Hero poster asset export from scene
+- **Preview:** slice-hero
 
 #### 2. Document device-tier scene fallback
 
@@ -54,6 +55,7 @@ None significant — site intentionally avoids generic AI slop.
 - **Preserve:** Full experience on capable devices
 - **Effort:** S
 - **Dependencies:** Performance monitor thresholds
+- **Preview:** skip
 
 #### 3. Strengthen focus visibility on header controls
 
@@ -62,6 +64,7 @@ None significant — site intentionally avoids generic AI slop.
 - **Trend justification:** anti-patterns — keyboard nav
 - **Preserve:** Minimal header visual weight
 - **Effort:** S
+- **Preview:** slice-nav
 
 ### P1 — Brand elevation
 

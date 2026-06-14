@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "siteSlug": "basement-studio",
+    "generatedAt": "2026-06-14T14:00:00.000Z",
+    "proposalPath": "../proposal.md",
+    "brandbookPath": "../brandbook.json"
+  },
+  "tier": "standard",
+  "recommendations": [
+    {
+      "id": "P0-1",
+      "title": "Add reduced-motion fallback for 3D hero",
+      "priority": "P0",
+      "preview": "slice-hero",
+      "previewFile": "after.html"
+    },
+    {
+      "id": "P0-3",
+      "title": "Strengthen focus visibility on header controls",
+      "priority": "P0",
+      "preview": "slice-nav",
+      "previewFile": "after.html"
+    },
+    {
+      "id": "P2-5",
+      "title": "Public Shader Lab presets gallery",
+      "priority": "P2",
+      "preview": "skip",
+      "skipReason": "Strategic scope — exceeds standard tier; needs real app"
+    }
+  ],
+  "files": {
+    "tokensCss": "tokens.css",
+    "beforeHtml": "before.html",
+    "afterHtml": "after.html",
+    "compareHtml": "compare.html"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "siteSlug": "basement-studio",
+    "generatedAt": "2026-06-14T14:00:00.000Z",
+    "proposalPath": "../proposal.md",
+    "brandbookPath": "../brandbook.json"
+  },
+  "tier": "standard",
+  "recommendations": [
+    {
+      "id": "P0-1",
+      "title": "Add reduced-motion fallback for 3D hero",
+      "priority": "P0",
+      "preview": "slice-hero",
+      "previewFile": "../prototype/after.html"
+    },
+    {
+      "id": "P0-2",
+      "title": "Document device-tier scene fallback",
+      "priority": "P0",
+      "preview": "skip",
+      "skipReason": "Engineering/runtime — not representable in static HTML"
+    },
+    {
+      "id": "P0-3",
+      "title": "Strengthen focus visibility on header controls",
+      "priority": "P0",
+      "preview": "slice-nav",
+      "previewFile": "../prototype/after.html"
+    },
+    {
+      "id": "P1-4",
+      "title": "View Transitions between showcase case studies",
+      "priority": "P1",
+      "preview": "skip",
+      "skipReason": "Requires Next.js runtime — preview in implementation phase"
+    }
+  ],
+  "files": {
+    "tokensCss": "../prototype/tokens.css",
+    "beforeHtml": "../prototype/before.html",
+    "afterHtml": "../prototype/after.html",
+    "compareHtml": "compare.html"
+  }
+}

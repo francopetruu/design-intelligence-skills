@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PreviewManifest",
+  "type": "object",
+  "required": ["meta", "tier", "recommendations", "files"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["siteSlug", "generatedAt", "proposalPath"],
+      "properties": {
+        "siteSlug": { "type": "string" },
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "proposalPath": { "type": "string" },
+        "brandbookPath": { "type": "string" }
+      }
+    },
+    "tier": {
+      "type": "string",
+      "enum": ["lite", "standard", "full"]
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "preview"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "priority": { "type": "string", "enum": ["P0", "P1", "P2"] },
+          "preview": {
+            "type": "string",
+            "enum": ["slice-hero", "slice-nav", "slice-section", "component", "compare-tokens", "skip"]
+          },
+          "previewFile": { "type": "string" },
+          "skipReason": { "type": "string" }
+        }
+      }
+    },
+    "files": {
+      "type": "object",
+      "properties": {
+        "tokensCss": { "type": "string" },
+        "beforeHtml": { "type": "string" },
+        "afterHtml": { "type": "string" },
+        "compareHtml": { "type": "string" },
+        "indexHtml": { "type": "string" },
+        "slices": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}
